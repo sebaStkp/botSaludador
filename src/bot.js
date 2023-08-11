@@ -1,17 +1,28 @@
 // bot.js
-function saludo(nom) {
+function saludo(nom, edad, genero) {
     let date = new Date();
     let hora = date.getHours();
+    let saludo = "";
+
     if (hora >= 5 && hora < 12){
-        return "Buenos días " + nom;
+        saludo += "Buenos días ";
     }
     if (hora >= 12 && hora < 19){
-        return "Buenas tardes " + nom;
+        saludo += "Buenas tardes ";
     }
     if (hora >= 19 || hora < 5){
-        return "Buenas noches " + nom;
+        saludo += "Buenas noches ";
     }
-    return "prueba";
+    if (edad >= 30){
+        if(genero == "Hombre"){
+            saludo += "Señor ";
+        }
+        if(genero == "Mujer"){
+            saludo += "Señora ";
+        }
+    }
+    saludo += nom;
+    return saludo;
 }
 
 export default saludo;

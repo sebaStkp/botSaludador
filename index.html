@@ -9,7 +9,16 @@
     <script type="module" src="./src/presenter.js"></script>
     <div>
         <form id="usr-data">
-            <input type="text" placeholder="Tu Nombre" id="nom-txt">
+            <input type="text" placeholder="Tu Nombre" id="nom-txt" required>
+            <br>
+            <input type="number" placeholder="Tu Edad" id="edad-txt" min="0" required>
+            <br>
+            <label for="masc-gen">Hombre</label>
+            <input type="radio" name="genero" id="masc-gen" value="Hombre" checked>
+            <br>
+            <label for="fem-gen">Mujer</label>
+            <input type="radio" name="genero" id="fem-gen" value="Mujer">
+            <br>
             <input type="submit" value="Aceptar" id="submit-btn">
         </form>
     </div>

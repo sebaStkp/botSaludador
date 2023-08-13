@@ -1,5 +1,5 @@
 // bot.js
-function saludo(nom, edad, genero) {
+export function saludo(nom, edad, genero) {
     let date = new Date();
     let hora = date.getHours();
     let saludo = "";
@@ -25,4 +25,29 @@ function saludo(nom, edad, genero) {
     return saludo;
 }
 
-export default saludo;
+export function saludoIngles(nom, edad, genero) {
+    let date = new Date();
+    let hora = date.getHours();
+    let saludo = "";
+
+    if (hora >= 5 && hora < 12){
+        saludo += "Good morning ";
+    }
+    if (hora >= 12 && hora < 19){
+        saludo += "Good afternoon ";
+    }
+    if (hora >= 19 || hora < 5){
+        saludo += "Good night ";
+    }
+    if (edad >= 30){
+        if(genero == "Hombre"){
+            saludo += "Mr. ";
+        }
+        if(genero == "Mujer"){
+            saludo += "Mrs. ";
+        }
+    }
+    saludo += nom;
+    return saludo;
+}
+

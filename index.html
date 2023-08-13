@@ -3,27 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
     <title>Botcito cato</title>
 </head>
 <body>
     <script type="module" src="./src/presenter.js"></script>
-    <div>
-        <form id="usr-data">
+    <div class="container">
+        <h1>Bot saludador</h1>
+        <form id="usr-data" action="">
             <input type="text" placeholder="Tu Nombre" id="nom-txt" required>
             <br>
             <input type="number" placeholder="Tu Edad" id="edad-txt" min="0" required>
-            <br>
-            <label for="masc-gen">Hombre</label>
-            <input type="radio" name="genero" id="masc-gen" value="Hombre" checked>
-            <br>
-            <label for="fem-gen">Mujer</label>
-            <input type="radio" name="genero" id="fem-gen" value="Mujer">
-            <br>
-            <input type="submit" value="Aceptar" id="submit-btn">
-        </form>
-    </div>
-    <div id="resp-div">
+            <h3>Genero</h3>
+            <label for="masc-gen">
+	            <input type="radio" name="genero" value="Hombre" checked>
+                Hombre
+			</label>
+            <label for="fem-gen">
+	            <input type="radio" name="genero" value="Mujer">
+                Mujer
+			</label>
 
+            <h3>Idioma</h3>
+            <label>
+	            <input type="radio" name="idioma" value="Ingles">
+	            Ingles
+			</label>
+            <label>
+	            <input type="radio" name="idioma" value="Español" checked>
+	            Español
+			</label>
+            <br>
+            <input type="submit" value="Aceptar" id="submit-btn" style="margin: 20px 2px;">
+
+        </form>
+        <div id="resp-div">
+
+        </div>
     </div>
+    
 </body>
 </html>
